@@ -1,21 +1,45 @@
 ﻿/* @import url("temas-colores-fuentes.css"); */
 
+body{
+   background-color: rgb(65, 64, 64);
+}
 #encabezado-principal {
-   background-color: red;
+   background-color: #17171b;
    color: white;
 }
 
+.tab-categoria{
+   font-size: 28px;
+}
+
 #navegacion-categoria {
-   background-color: lime;
+   background-color: darkgoldenrod;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+
+a { 
+   text-decoration: none;
+   font-size: 22px;
+   font-weight: bold;
+   color: black;
 }
 
 #seccion-categoria {
    min-height: 720px;
-   background-color: orange;
+   width: auto;
+   background-color: #ffffff;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+   gap: 20px;
+   padding: 20px;
+   color: black;
 }
 
 .articulo-categoria {
-   border: solid 3px gray;
+   border: solid 3px black;
 }
 
 #footer-principal {
@@ -26,4 +50,15 @@
 #qr-code {
    width:100px;
    height:100px;
+}
+.item-valor-portada{
+   width: 450px; height: 350px; object-fit: contain;
+}
+
+.header-articulo{
+   text-align: center;
+}
+
+.detalle-articulo{
+   padding-left: 10px;
 }
