@@ -1,7 +1,11 @@
 ﻿/* @import url("temas-colores-fuentes.css"); */
 
+*{
+   margin: 0;
+   box-sizing: border-box;
+}
 body{
-   background-color: rgb(65, 64, 64);
+   background-color: #414040;
 }
 #encabezado-principal {
    background-color: #17171b;
@@ -17,14 +21,22 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
+   list-style: none;
+   text-decoration: none;
    gap: 20px;
 }
 
-a { 
+nav a { 
    text-decoration: none;
    font-size: 22px;
    font-weight: bold;
    color: black;
+}
+
+nav a:hover{
+color: #414040;
+font-size: 30px;
+text-shadow: 2px 2px 2px gray;
 }
 
 #seccion-categoria {
@@ -32,7 +44,7 @@ a {
    width: auto;
    background-color: #ffffff;
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
    gap: 20px;
    padding: 20px;
    color: black;
@@ -52,7 +64,9 @@ a {
    height:100px;
 }
 .item-valor-portada{
-   width: 450px; height: 350px; object-fit: contain;
+   width: 450px;
+  height: 300px;
+  object-fit: contain;
 }
 
 .header-articulo{
