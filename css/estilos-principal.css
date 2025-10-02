@@ -43,10 +43,23 @@ a {
 }
 
 #footer-principal {
-   background-color: blue;
+   background-color: black;
    color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 400px;
 }
 
+#footer-principal-izquierda,
+#footer-principal-centro,
+#footer-principal-derecha{
+   height: 370px;
+   width: 335px;
+   background-color: #808080;
+   margin: 60px;
+   text-align: center;
+}
 #qr-code {
    width:100px;
    height:100px;
