@@ -1,11 +1,48 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title></title>
+   <link rel="stylesheet" href="/css/estilos-datos-personales.css">
+   <title>Mi Perfil</title>
 </head>
+
 <body>
-   
+   <h3>Mi cuenta - Mi usuario</h3>
+   <h1 class="titulo">Mi Usuario</h1>
+   <hr>
+   <form action="/index.html" class="email-contraseña">
+      <label>Email Principal</label>
+      <input type="email" placeholder="Email">
+      <button type="submit" class="guardar">Guardar Cambios</button>
+      <hr>
+      <label>Contraseña</label>
+      <input type="password" name="Contraseña">
+      <button type="submit">Cambiar</button>
+   </form>
+   <hr id="barra">
+   <h3>Mi cuenta - Datos Personales</h3>
+   <h1 class="titulo">Datos Personales</h1>
+   <hr>
+   <form action="/index.html" class="datos-personales">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre">
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido">
+      <label for="tipo">Tipo</label>
+      <input type="text" id="tipo">
+      <label for="documento">Numero de documento</label>
+      <input type="number" id="documento">
+      <label for="fecha-de-nacimiento">Fecha de nacimiento</label>
+      <input type="date" id="fecha-de-nacimiento">
+      <label for="telefono">Telefono celular</label>
+      <input type="number" id="telefono">
+      <label for="email-secundario">Email secundario</label>
+      <input type="email" id="email-secundario">
+      <button type="submit" class="guardar">Guardar Cambios</button>
+   </form>
+   <a href="/index.html"><button>Volver al home</button></a>
 </body>
+
 </html>
