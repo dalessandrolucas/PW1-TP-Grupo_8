@@ -20,8 +20,13 @@ linksCategorias.forEach((linkCategoria) => {
          articuloContenedor.getElementsByClassName("item-valor-descripcion")[0].innerText = Descripcion;
          articuloContenedor.getElementsByClassName("item-valor-rating")[0].innerText = Rating;
 
+         const rating = articuloContenedor.getElementsByClassName("item-valor-rating")[0];
+         const valorRating = parseInt(Rating);
+         const estrellas = '★' .repeat(valorRating) + '☆' .repeat(5 - valorRating);
+         rating.innerHTML = `Rating: ${estrellas}`;
+       
          const personalizados = Object.keys(item).filter(key => key.startsWith("personalizado_"));
-         
+
          personalizados.forEach((personalizado, index) => {
             articuloContenedor.getElementsByClassName(`item-campo-personalizado_${index + 1}`)[0].innerText = personalizado.split(".")[1];
             articuloContenedor.getElementsByClassName(`item-valor-personalizado_${index + 1}`)[0].innerText = item[personalizado];
