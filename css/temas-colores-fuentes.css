@@ -5,13 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans');
 
 :root {
-   --light-color-texto: #000000;
+   --light-color-texto: white;
    --light-color-fondo: #ffffff;
    --light-color-acento-1: #0b47d1;
    --light-color-acento-2: #808080;
-   --light-color-acento-3: #5160ac;
+   --light-color-acento-3: #c4c8dd;
    --dark-color-texto: #ffffff;
-   --dark-color-fondo: #000000;
+   --dark-color-fondo:  #414040;
    --dark-color-acento-1: #293156;
    --dark-color-acento-2: #808080;
    --dark-color-acento-3: #051c51;
@@ -25,4 +25,47 @@
 .dark-theme {
    color: var(--dark-color-texto);
    background-color: var(--dark-color-fondo);
+}
+
+.header-articulo{
+   background-color: var(--light-color-acento-1);
+}
+
+.detalle-articulo{
+   background-color: var(--light-color-acento-1);
+   font-family: 'Exo 2';
+}
+
+.body,html{
+   background-color: var(--light-color-fondo)
+}
+
+#encabezado-principal{
+   background-color: var(--light-color-acento-1);
+}
+
+.item-valor-nombre{
+   background-color: var(--light-color-acento-1);
+}
+
+.header-articulo p,
+.header-articulo span {
+   color: var(--light-color-texto);
+   font-family: 'Exo 2';
+}
+
+.tab-categoria{
+   font-family: 'Prompt';
+}
+
+.titulo-datos-personales h2{
+font-family: 'Prompt';
+}
+
+#navegacion-categoria .tab-categoria {   
+   color: var(--light-color-texto);
+}
+
+#navegacion-categoria{   
+   background-color: var(--light-color-acento-1);
 }

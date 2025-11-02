@@ -1,48 +1,140 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/css/estilos-datos-personales.css">
-   <title>Mi Perfil</title>
+   <link rel="stylesheet" href="../css/estilos-datos-personales.css">
+   <link rel="stylesheet" href="../css/temas-colores-fuentes.css">
+   <link rel="stylesheet" href="../css/estilos-principal.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
+   <title>Document</title>
 </head>
 
 <body>
-   <h3>Mi cuenta - Mi usuario</h3>
-   <h1 class="titulo">Mi Usuario</h1>
-   <hr>
-   <form action="/index.html" class="email-contraseña">
-      <label>Email Principal</label>
-      <input type="email" placeholder="Email">
-      <button type="submit" class="guardar">Guardar Cambios</button>
-      <hr>
-      <label>Contraseña</label>
-      <input type="password" name="Contraseña">
-      <button type="submit">Cambiar</button>
-   </form>
-   <hr id="barra">
-   <h3>Mi cuenta - Datos Personales</h3>
-   <h1 class="titulo">Datos Personales</h1>
-   <hr>
-   <form action="/index.html" class="datos-personales">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre">
-      <label for="apellido">Apellido</label>
-      <input type="text" id="apellido">
-      <label for="tipo">Tipo</label>
-      <input type="text" id="tipo">
-      <label for="documento">Numero de documento</label>
-      <input type="number" id="documento">
-      <label for="fecha-de-nacimiento">Fecha de nacimiento</label>
-      <input type="date" id="fecha-de-nacimiento">
-      <label for="telefono">Telefono celular</label>
-      <input type="number" id="telefono">
-      <label for="email-secundario">Email secundario</label>
-      <input type="email" id="email-secundario">
-      <button type="submit" class="guardar">Guardar Cambios</button>
-   </form>
-   <a href="/index.html"><button>Volver al home</button></a>
+   <header id="encabezado-principal">
+      <section class="logo">
+         <a href="/index.html">
+            <img src="/assets/img/logo.png" alt="logo">
+         </a>
+      </section>
+      <section class="buscador">
+         <a href="#">
+            <input type="search" placeholder="Buscar">
+         </a>
+         <i class="fa-solid fa-magnifying-glass"></i>
+      </section>
+      <section class="icons">
+         <a href="#"><i class="fa-solid fa-moon"></i></a>
+         <a href="#"><i class="fa-solid fa-star"></i></a>
+      </section>
+   </header>
+
+
+   <main class="form-container">
+      <div class="contenedor-datos-personales">
+         <nav class="nav-cuenta">
+            <a href="#">Mi cuenta</a>
+            <a href="#">Mi usuario</a>
+         </nav>
+         <h1>Mi Usuario</h1>
+         <hr>
+         <form action="#">
+            <section class="mi-usuario">
+               <label for="email">Email principal</label>
+               <input type="email" id="email" placeholder="                        @gmail.com" required>
+               <button type="submit">GUARDAR CAMBIOS</button>
+            </section>
+         </form>
+         <hr>
+         <form action="/index.html" class="mi-contraseña-form">
+            <section class="mi-contraseña">
+               <label for="contraseña">Contraseña</label>
+               <input type="password" id="contraseña" placeholder="********" required>
+               <button type="submit">CAMBIAR</button>
+            </section>
+         </form>
+         <hr>
+         <nav class="nav-cuenta">
+            <a href="#">Mi cuenta</a>
+            <a href="#" class="current">Datos Personales</a>
+         </nav>
+         <h1>Datos Personales</h1>
+         <hr>
+         <form action="/index.html" class="form-datos-personales">
+            <section>
+               <div class="form-field">
+
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" placeholder="Nombre" required>
+               </div>
+               <div class="form-field">
+
+                  <label for="apellido">Apellido</label>
+                  <input type="text" id="apellido" placeholder="Apellido" required>
+               </div>
+               <div class="form-field">
+
+                  <label for="Direccion">Dirección</label>
+                  <input type="text" id="direccion" placeholder="Dirección" required>
+               </div>
+               <div class="form-field">
+
+                  <label for="fecha-nacimiento">Fecha De Nacimiento</label>
+                  <input type="date" id="fecha-nacimiento" placeholder="Fecha de Nacimiento" required>
+               </div>
+               <div class="form-field">
+
+                  <label for="tipo">Teléfono</label>
+                  <input type="tel" id="telefono" placeholder="Teléfono" required>
+               </div>
+               <div class="form-field">
+
+                  <label for="email-secundario">Email Secundario</label>
+                  <input type="email" id="email-secundario" placeholder="Email Secundario" required>
+               </div>
+               <button type="submit">GUARDAR CAMBIOS</button>
+            </section>
+         </form>
+      </div>
+
+   </main>
+
+   <footer>
+      <div class="footer-container">
+         <section class="Menu">
+            <h3>MENÚ</h3>
+            <ul class="menu-list">
+               <li><a href="/index.html">Home</a></li>
+               <li><a href="/html/favoritos.html">Favoritos</a></li>
+            </ul>
+         </section>
+
+         <section class="redes-sociales">
+            <h3>¡SÍGUENOS!</h3>
+            <div class="icons">
+               <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+               <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
+               <a href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+            </div>
+         </section>
+
+         <section class="legal">
+            <h3>LEGAL</h3>
+            <ul class="legal-list">
+               <li><a href="#">Privacy</a></li>
+               <li><a href="#">Cookies</a></li>
+               <li><a href="#">Legal</a></li>
+            </ul>
+         </section>
+
+      </div>
+   </footer>
+
 </body>
 
 </html>

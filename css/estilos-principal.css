@@ -1,35 +1,44 @@
-﻿/* @import url("temas-colores-fuentes.css"); */
+﻿@import url("temas-colores-fuentes.css");
 
 *{
    margin: 0;
    box-sizing: border-box;
 }
+
 body{
-   background-color: #414040;
+   background-image: url(/assets/img/fondo.png);
 }
+
+input{
+   font-size: 1rem;
+    border: 0.2em solid black;
+    border-radius: 0.5em;
+    width: fit-content;
+}
+
 #encabezado-principal {
-   background-color: #17171b;
    color: white;
+   padding: 10px;
 }
 
 .tab-categoria{
    font-size: 28px;
 }
 
-#navegacion-categoria {
-   background-color: darkgoldenrod;
+#navegacion-categoria {   
    display: flex;
    align-items: center;
    list-style: none;
    text-decoration: none;
    gap: 20px;
+   padding: 10px;
+   justify-content: space-evenly;
 }
 
 nav a { 
    text-decoration: none;
    font-size: 22px;
    font-weight: bold;
-   color: black;
 }
 
 nav a:hover{ 
@@ -39,21 +48,25 @@ nav a:hover{
 #seccion-categoria {
    min-height: 720px;
    width: auto;
-   background-color: #ffffff;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
    gap: 20px;
    padding: 20px;
-   color: black;
+   border-radius: 2em;
 }
 
 .articulo-categoria {
-   border: solid 3px black;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    border-radius: 1em;
+    overflow: hidden;
 }
 
-#footer-principal {
-   background-color: black;
-   color: white;
+.item-valor-nombre, .item-valor-autor{
+   font-size: 24px;
+   font-weight: bold;
+   margin-top: 10px;
 }
 
 #qr-code {
@@ -61,17 +74,24 @@ nav a:hover{
    height:100px;
 }
 .item-valor-portada{
-   width: 450px;
-  height: 300px;
-  object-fit: contain;
+   width: 100%;
+   aspect-ratio: 16/ 9;
+   object-fit: cover;
+   border-radius: 0.2em;
 }
 
-.header-articulo{
-   text-align: center;
+.header-articulo {
+   flex: 1; 
+   display: flex;
+   align-items: center;
+   flex-direction: column;
 }
 
-.detalle-articulo{
-   padding-left: 10px;
+.detalle-articulo {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   padding: 1rem;
 }
 
 #encabezado-principal{
@@ -83,8 +103,7 @@ nav a:hover{
 
 .buscador input{
    width: 20em;
-   height: 2em;
-   
+   height: 2em;  
 }
 
 .logo img{
@@ -101,20 +120,29 @@ nav a:hover{
    font-size: 1.3em;
 }
 
+.header-articulo {
+   gap: 10px;
+   padding: 10px;
+}
+
+
 /*Estilos Footer*/
+#footer-principal {
+   color: white;
+}
 
 footer {
-  background-color: #222;
-  color: white;
-  width: 100%;
+   background-color: #222;
+   color: white;
+   width: 100%;
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  flex-wrap: wrap;
-  padding: 30px;
+   display: flex;
+   justify-content: space-around;
+   text-align: center;
+   flex-wrap: wrap;
+   padding: 30px;
 }
 
 .footer-container ul {
@@ -123,31 +151,63 @@ footer {
   margin: 0;
 }
 
+.footer-container .redes-sociales{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+}
+
 .footer-container a {
   color: white;
   text-decoration: none;
 }
 
-.footer-container a:hover {
-  color: #ddd;
-}
-
-.icons {
-  margin-top: 20px;
-}
-
 .icons a {
   margin: 0 8px;
   font-size: 1.4rem;
-  color: white;
 }
 
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 1em;
   }
 }
 
 /*Fin estilos Footer*/
+
+/*estilos-principal responsive*/
+@media (max-width: 768px) {
+   .buscador input{
+       width: 10em;
+       height: 2em;  
+   }
+
+   #seccion-categoria {
+       grid-template-columns: 1fr;
+   }
+
+   .logo a img{
+       width: 65px;
+       height: 85px;
+   }
+
+   .icons a{
+       margin-right: 0.2em;
+   }
+
+   .icons i{
+       font-size: 1em;
+   }
+
+   .tab-categoria { 
+       font-size: 1.1em;
+   }
+
+   #encabezado-principal {
+       justify-content: space-between;
+   }
+}
+/*Fin estilos-principal responsive*/

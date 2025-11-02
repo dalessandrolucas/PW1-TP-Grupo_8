@@ -1,44 +1,132 @@
-﻿/* estilos-datos-personales.css */
-*{
+﻿/*estilos-datos-personales.css*/
+
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
-h3 {
+body {
+    overflow-x: hidden;
+}
+
+.form-container {
+    max-width: 48em;
+    padding: 1.2em;
+    border: 0.2em solid black;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-color-fondo);
+}
+
+.contenedor-datos-personales {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    padding: 1em;
+    border: 0.3em solid black;
+
+}
+
+hr {
+    border: none;
+    border-top: 0.1em solid var(--light-color-acento-3);
+    margin: 0.01em 0;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input {
+    font-size: 1rem;
+    border: 0.2em solid black;
+    border-radius: 0.5em;
+    width: fit-content;
+}
+
+.nav-cuenta {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.nav-cuenta a {
+    color: var(--light-color-acento-2);
+    text-decoration: none;
+}
+
+.nav-cuenta a+ ::before {
+    content: "•";
     color: gray;
-    margin-left: 2em;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin: 0 0.4rem;
+    font-size: 0.9rem;
 }
 
-.titulo{
-    margin-left: 1em;
-    margin-top: 1em;
+.mi-usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
 }
 
-
-hr{
-    margin-left: 2em;
-    margin-right: 2em;
-    margin-top: 1.5em;
+.mi-contraseña {
+    display: flex;
+    flex-direction: column;
 }
 
-#barra{
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 0;
-    margin-right: 0;
-    border-color: black;
-    border-width: 1.5px;
+.mi-contraseña-form {
+    display: flex;
+    gap: 1em;
 }
 
-.datos-personales{
+.mi-usuario button {
+    width: 12em;
+    border-color: transparent;
+    border-radius: 0.2em;
+}
+
+.mi-contraseña-form button {
+    width: 12em;
+    border: none;
+    margin-top: 0.3em;
+}
+
+.form-datos-personales section {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1em;
+    gap: 1em auto;
+
 }
 
-.email-contraseña input{
-    margin-left: 2.8em;
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+
 }
 
+.form-datos-personales button {
+   margin-top: 0.3em;
+
+}
+
+.form-container button {
+    padding: 0.5em 1em;
+    width: fit-content;
+    background-color: var(--light-color-acento-1);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .form-field {
+        width: 45%;
+    }
+
+    .form-container {
+        margin: 1em auto;
+    }
+}
