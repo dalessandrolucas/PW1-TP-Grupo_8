@@ -77,3 +77,7 @@ font-family: 'Prompt';
 #navegacion-categoria{   
    background-color: var(--light-color-acento-1);
 }
+
+.main-registro{
+   font-family: 'work Sans', serif;
+}
