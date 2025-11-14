@@ -62,6 +62,14 @@
 font-family: 'Prompt';
 }
 
+.footer-container{
+   font-family: 'Prompt', serif;
+}
+
+.form-container, .form-container button {
+   font-family: 'Work Sans', serif;
+}
+
 #navegacion-categoria .tab-categoria {   
    color: var(--light-color-texto);
 }
