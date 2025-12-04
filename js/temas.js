@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnTema = document.querySelector('.fa-moon').parentElement;
     const icono = btnTema.querySelector('i');
-
     const aplicarTema = (esOscuro) => {
         if (esOscuro) {
             document.body.classList.add('dark-mode');
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const preferenciaGuardada = localStorage.getItem('tema') === 'oscuro';
     aplicarTema(preferenciaGuardada);
-
 
     btnTema.addEventListener('click', (e) => {
         e.preventDefault();

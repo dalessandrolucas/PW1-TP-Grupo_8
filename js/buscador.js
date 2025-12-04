@@ -40,11 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 articulo.style.display = "none";
             }
         });
-
-
+        
         mensajeNoResultados.style.display = hayResultados ? "none" : "block";
     };
-
 
     if (inputBuscador) {
         inputBuscador.addEventListener("input", aplicarFiltro);

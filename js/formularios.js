@@ -301,6 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
         inputFecha.addEventListener('change', validarFormularioDatos);
         inputTelefono.addEventListener('input', validarFormularioDatos);
         inputEmailSec.addEventListener('input', validarFormularioDatos);
+        
         validarFormularioDatos();
 
         btnGuardar.addEventListener('click', (e) => {
