@@ -1,0 +1,111 @@
+#carrusel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+#carrusel-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+#carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: black;
+    text-align: center;
+    min-height: 300px;
+}
+
+.carrusel-item img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.carrusel-item h3 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    font-family: 'Exo 2';
+}
+
+.btn-carrusel {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+    flex-shrink: 0;
+}
+
+.btn-carrusel:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/*carrusel responsive*/
+@media (max-width: 768px) {
+    .carrusel-item {
+        min-height: 250px;
+        padding: 15px;
+    }
+
+    .carrusel-item img {
+        max-height: 350px;
+    }
+
+    .carrusel-item h3 {
+        font-size: 1.8em;
+    }
+
+    .btn-carrusel {
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #carrusel-container {
+        gap: 8px;
+        padding: 0 5px;
+    }
+
+    .carrusel-item {
+        min-height: 200px;
+        padding: 10px;
+    }
+
+    .carrusel-item img {
+        max-height: 250px;
+    }
+
+    .carrusel-item h3 {
+        font-size: 1.3em;
+    }
+
+    .btn-carrusel {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}
+
+/*carrusel responsive*/

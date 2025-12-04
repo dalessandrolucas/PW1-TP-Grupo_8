@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     height: 100%;
 }
 
@@ -14,7 +14,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-    background-image: url(/assets/img/fondo.png);
 }
 
 .form-container {
@@ -33,7 +32,6 @@ body {
     gap: 0.8em;
     padding: 1em;
     border: 0.3em solid black;
-
 }
 
 hr {
@@ -51,7 +49,7 @@ input {
     font-size: 1rem;
     border: 0.2em solid black;
     border-radius: 0.5em;
-    width: fit-content;
+
 }
 
 .nav-cuenta {
@@ -64,7 +62,7 @@ input {
     text-decoration: none;
 }
 
-.nav-cuenta a + ::before {
+.nav-cuenta a+ ::before {
     content: "•";
     color: gray;
     margin: 0 0.4rem;
@@ -75,30 +73,14 @@ input {
     display: flex;
     flex-direction: column;
     margin-top: 1em;
+    gap: 0.5em;
+
 }
 
-.mi-contraseña {
-    display: flex;
-    flex-direction: column;
-}
-
-.mi-contraseña-form {
+#formulario-sesion {
     display: flex;
     flex-direction: column;
     gap: 1em;
-}
-
-.mi-contraseña-form button {
-    width: 12em;
-    border: none;
-    margin-top: 1em;
-    
-}
-
-.mi-contraseña-form button:hover {
-    background-color: black;
-    color: white;
-    transform: scale(1.02);
 }
 
 .form-datos-personales section {
@@ -106,19 +88,16 @@ input {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 1.8em auto;
-
 }
 
 .form-field {
     display: flex;
     flex-direction: column;
     gap: 0.3em;
-
 }
 
 .form-datos-personales button {
-   margin-top: 1em;
-
+    margin-top: 1em;
 }
 
 .form-container button {

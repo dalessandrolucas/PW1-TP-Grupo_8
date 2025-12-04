@@ -6,7 +6,9 @@
 }
 
 body {
-   background-image: url(/assets/img/fondo.png);
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
 }
 
 input {
@@ -22,7 +24,23 @@ input {
 }
 
 .tab-categoria {
-   font-size: 28px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent; 
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.tab-categoria:hover {
+    opacity: 1;
+}
+
+.tab-categoria.tab-activa {
+    opacity: 1;           
+    font-weight: bold;    
+    transform: scale(1.1);
+    border-bottom: 3px solid #0b47d1;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.5); 
 }
 
 #navegacion-categoria {
@@ -95,6 +113,7 @@ nav a:hover {
    display: flex;
    flex-direction: column;
    padding: 1rem;
+   gap: 10px;
 }
 
 #encabezado-principal {
@@ -107,6 +126,13 @@ nav a:hover {
 .buscador input {
    width: 20em;
    height: 2em;
+}
+
+.btn-buscador {
+   background-color: var(--acento-primario);
+   color: white;
+   border: none;
+   cursor: pointer;
 }
 
 .logo img {
@@ -128,6 +154,15 @@ nav a:hover {
    padding: 10px;
 }
 
+#seccion-categoria .articulo-categoria:hover {
+   transform: scale(1.01);
+   transition: 0.3s ease;
+}
+
+.articulo-categoria.active {
+   transform: scale(0.98);
+   filter: brightness(1.1);
+}
 
 /*Estilos Footer*/
 #footer-principal {
@@ -172,6 +207,7 @@ footer {
    font-size: 1.4rem;
 }
 
+
 @media (max-width: 768px) {
    .footer-container {
       flex-direction: column;
@@ -199,7 +235,7 @@ footer {
    }
 
    .icons a {
-      margin: 0.2em;
+      margin: 0.1em;
    }
 
    .icons i {

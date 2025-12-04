@@ -1,0 +1,29 @@
+#contenedor-favoritos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 20px;
+    min-height: 60vh;
+}
+
+h1{
+text-align: center; 
+font-family: 'Prompt'; 
+margin-top: 20px;
+}
+
+.articulo-categoria {
+    flex: 1 500px;
+    min-width: 300px;
+    height: auto;
+}
+
+.aviso-vacio {
+    width: 100%;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+    margin-top: 50px;
+    font-size: 1rem;
+
+}

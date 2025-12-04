@@ -1,53 +1,40 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Iniciar Sesion</title>
-   <link rel="shortcut icon" href="../assets/img/logo.png" />
-   <link rel="stylesheet" href="../css/estilos-login.css">
+   <title>Mis Favoritos | Global Motors</title>
+   <link rel="shortcut icon" href="assets/img/logo.png" />
    <link rel="stylesheet" href="../css/temas-colores-fuentes.css">
    <link rel="stylesheet" href="../css/estilos-principal.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
+   <link rel="stylesheet" href="../css/favoritos.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
-
    <header id="encabezado-principal">
       <section class="logo">
          <a href="../index.html">
             <img src="../assets/img/logo.png" alt="logo">
          </a>
       </section>
+      <section class="buscador">
+         <input type="search" placeholder="Buscar en favoritos...">
+         <button class="btn-buscador"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </section>
       <section class="icons">
+         <a href="datos-personales.html"><i class="fa-solid fa-circle-user"></i></a>
          <a href="#"><i class="fa-solid fa-moon"></i></a>
+         <a href="favoritos.html" class="active"><i class="fa-solid fa-star"></i></a>
       </section>
    </header>
 
-   <main class="form-container">
-      <form id="form-login" action="#">
-         <div class="main-login">
-            <h1>Iniciar Sesión</h1>
-            <label for="email-login"></label>
-            <input type="email" id="email-login" placeholder="Email*" required>
-
-            <label for="contraseña-login"></label>
-            <input type="password" id="contraseña-login" placeholder="Contraseña*" required>
-
-            <span>
-               <a href="recuperar-password.html">¿Olvidaste tu contraseña?</a>
-            </span>
-
-            <button class="submit-login" type="submit" disabled>INICIAR SESIÓN</button>
-
-            <span>¿No tienes cuenta? <a href="registrarse.html">Registrate</a></span>
-         </div>
-      </form>
+   <main>
+      <h1>Mis Vehículos Favoritos</h1>
+      <section id="contenedor-favoritos">
+      </section>
    </main>
 
    <footer>
@@ -59,7 +46,6 @@
                <li><a href="datos-personales.html">Perfil</a></li>
             </ul>
          </section>
-
          <section class="redes-sociales">
             <h3>¡SÍGUENOS!</h3>
             <div class="icons">
@@ -68,7 +54,6 @@
                <a href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
             </div>
          </section>
-
          <section class="legal">
             <h3>LEGAL</h3>
             <ul class="legal-list">
@@ -77,12 +62,11 @@
                <li><a href="#">Legal</a></li>
             </ul>
          </section>
-
       </div>
    </footer>
 
-   <script src="../js/formularios.js"></script>
    <script src="../js/temas.js"></script>
+   <script type="module" src="../js/favoritos.js"></script>
 </body>
 
 </html>

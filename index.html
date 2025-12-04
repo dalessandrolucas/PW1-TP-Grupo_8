@@ -5,9 +5,10 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Global Motors</title>
-
+   <link rel="shortcut icon" href="assets/img/logo.png" />
    <link rel="stylesheet" href="css/temas-colores-fuentes.css">
    <link rel="stylesheet" href="css/estilos-principal.css">
+   <link rel="stylesheet" href="css/estilos-carrusel.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,26 +20,35 @@
 <body>
    <header id="encabezado-principal">
       <section class="logo">
-         <a href="/index.html">
-            <img src="/assets/img/logo.png" alt="logo">
+       <a href="index.html">
+            <img src="assets/img/logo.png" alt="logo">
          </a>
       </section>
       <section class="buscador">
          <a href="#">
             <input type="search" placeholder="Buscar">
          </a>
-         <i class="fa-solid fa-magnifying-glass"></i>
+         <button class="btn-buscador"><i class="fa-solid fa-magnifying-glass"></i></button>
       </section>
       <section class="icons">
-         <a href="/html/datos-personales.html"><i class="fa-solid fa-circle-user"></i></a>
+        <a href="html/datos-personales.html"><i class="fa-solid fa-circle-user"></i></a>
          <a href="#"><i class="fa-solid fa-moon"></i></a>
-         <a href="#"><i class="fa-solid fa-star"></i></a>
+         <a href="html/favoritos.html"><i class="fa-solid fa-star"></i></a>
       </section>
    </header>
    <header id="encabezado-secundario">
-      <h1>ENCABEZADO SECUNDARIO --- CARRUSEL</h1>
-      <div id="carrusel">
-      </div>
+
+      <section id="carrusel-container">
+         <button id="btn-anterior" class="btn-carrusel">❮</button>
+
+         <div id="carrusel-wrapper">
+            <div id="carrusel" class="carrusel">
+
+            </div>
+         </div>
+
+         <button id="btn-siguiente" class="btn-carrusel">❯</button>
+      </section>
    </header>
 
    <main>
@@ -56,314 +66,338 @@
       <section id="seccion-categoria">
          <article id="categoria00-item01" class="articulo-categoria item01">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
+
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   1</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 1
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item01.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;color: white;">DescripciÃ³n</span> ITEM 1</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 1</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   1</p>
             </header>
-
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item02" class="articulo-categoria item02">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   2</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 2
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item02.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 2</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 2</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   2</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item03" class="articulo-categoria item03">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   3</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 3
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item03.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 3</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 3</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   3</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item04" class="articulo-categoria item04">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   4</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 4
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item04.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 4</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 4</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   4</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item05" class="articulo-categoria item05">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   5</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 5
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item05.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 5</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 5</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   5</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item06" class="articulo-categoria item06">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   6</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 6
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item06.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 6</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 6</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   6</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item07" class="articulo-categoria item07">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   7</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 7
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item07.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 7</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 7</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   7</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item08" class="articulo-categoria item08">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   8</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 8
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item08.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 8</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 8</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   8</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item09" class="articulo-categoria item09">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   9</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 9
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item09.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 9</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 9</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   9</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item10" class="articulo-categoria item10">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   10</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 10
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item10.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 10</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 10</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   10</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item11" class="articulo-categoria item11">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   11</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 11
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item11.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 11</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 11</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   11</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
 
          <article id="categoria00-item12" class="articulo-categoria item12">
             <header class="header-articulo">
+               <i class="fa-regular fa-star btn-favorito"
+                  style="cursor:pointer; font-size: 1.5rem; float: right; margin: 10px; color: white;"></i>
                <p class="item-valor-nombre"><span style="font-weight:bold;text-transform:uppercase;">Nombre</span> ITEM
                   12</p>
                <p class="item-valor-autor"><span style="font-weight:bold;text-transform:uppercase;">Autor</span> ITEM 12
                </p>
                <img class="item-valor-portada" src='assets/img/categoria00-item12.png' alt='Imagen de Portada'>
                <p class="item-valor-descripcion"><span
-                     style="font-weight:bold;text-transform:uppercase;">DescripciÃ³n</span> ITEM 12</p>
+                     style="font-weight:bold;text-transform:uppercase;">Descripción</span> ITEM 12</p>
                <p class="item-valor-rating"><span style="font-weight:bold;text-transform:uppercase;">Rating</span> ITEM
                   12</p>
             </header>
             <div class="detalle-articulo">
-               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO PERSONALIZADO 1</h4>
-               <p class="item-valor-personalizado_1" style="color:white;">valor personalizado 1</p>
-               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO PERSONALIZADO 2</h4>
-               <p class="item-valor-personalizado_2" style="color:white;">valor personalizado 2</p>
-               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO PERSONALIZADO 3</h4>
-               <p class="item-valor-personalizado_3" style="color:white;">valor personalizado 3</p>
-               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO PERSONALIZADO 4</h4>
-               <p class="item-valor-personalizado_4" style="color:white;">valor personalizado 4</p>
-               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO PERSONALIZADO 5</h4>
-               <p class="item-valor-personalizado_5" style="color:white;">valor personalizado 5</p>
+               <h4 class="item-campo-personalizado_1" style="color: white;">CAMPO 1</h4>
+               <p class="item-valor-personalizado_1" style="color:white;">valor 1</p>
+               <h4 class="item-campo-personalizado_2" style="color:white;">CAMPO 2</h4>
+               <p class="item-valor-personalizado_2" style="color:white;">valor 2</p>
+               <h4 class="item-campo-personalizado_3" style="color:white;">CAMPO 3</h4>
+               <p class="item-valor-personalizado_3" style="color:white;">valor 3</p>
+               <h4 class="item-campo-personalizado_4" style="color:white;">CAMPO 4</h4>
+               <p class="item-valor-personalizado_4" style="color:white;">valor 4</p>
+               <h4 class="item-campo-personalizado_5" style="color:white;">CAMPO 5</h4>
+               <p class="item-valor-personalizado_5" style="color:white;">valor 5</p>
             </div>
          </article>
       </section>
@@ -375,8 +409,8 @@
             <h3>MENÚ</h3>
             <ul class="menu-list">
                <li><a href="index.html">Home</a></li>
-               <li><a href="/html/datos-personales.html">Perfil</a></li>
-               <li><a href="/html/favoritos.html">Favoritos</a></li>
+               <li><a href="html/datos-personales.html">Perfil</a></li>
+               <li><a href="html/favoritos.html">Favoritos</a></li>
             </ul>
          </section>
 
@@ -403,8 +437,11 @@
 
    <!-- INICIO | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
    <script type="module" src="js/cargar-datos.js"></script>
+   <script type="module" src="js/carrusel.js"></script>
+   <script src="js/buscador.js"></script>
+   <script src="js/temas.js"></script>
+   <script type="module" src="js/favoritos.js"></script>
    <!-- FIN | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
-    <script src="js/carrusel.js"></script>
 </body>
 
 </html>
